@@ -1,0 +1,368 @@
+.customers-page {
+    min-height: 100vh;
+    padding: 30px;
+    background: #f4f7fb;
+}
+
+.customers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.customers-header h1 {
+    font-size: 30px;
+    color: #172554;
+    text-align: left;
+}
+
+.customers-header p {
+    margin-top: 6px;
+    color: #64748b;
+    text-align: left;
+}
+
+.add-customer-btn {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-customer-btn:hover {
+    background: #1d4ed8;
+}
+
+.customers-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h3 {
+    color: #172554;
+}
+
+.table-header span {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.customers-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.customers-table th,
+.customers-table td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.customers-table th {
+    padding: 14px;
+    background: #f8fafc;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.customers-table td {
+    padding: 16px 14px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: 14px;
+    height: 60px;
+}
+
+.customers-table tbody tr {
+    height: 60px;
+}
+
+.customers-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-badge.pending {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.status-badge.verified {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-badge.rejected {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.verification-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.verification-badge.approved {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.verification-badge.verified {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.verification-badge.rejected {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.verification-badge.pending {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.verification-badge.manual_review {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.kyc-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.verify-btn,
+.reject-btn {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.verify-btn {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.verify-btn:hover {
+    background: #bbf7d0;
+}
+
+.reject-btn {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.reject-btn:hover {
+    background: #fecaca;
+}
+
+.risk-badge {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 65px;
+    text-align: center;
+}
+
+.risk-badge.low {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.risk-badge.medium {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.risk-badge.high {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.risk-score {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: #e0e7ff;
+    color: #3730a3;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.risk-reason {
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.4;
+    max-width: 220px;
+}
+
+.risk-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.risk-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.risk-card span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.risk-card strong {
+    font-size: 26px;
+    color: #172554;
+}
+
+@media (max-width: 900px) {
+    .risk-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.risk-score.low {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.risk-score.medium {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.risk-score.high {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.customer-form {
+    padding: 25px;
+    background: white;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.cancel-btn,
+.save-customer-btn {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.save-customer-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.save-customer-btn:hover {
+    background: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+}
